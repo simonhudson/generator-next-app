@@ -17,4 +17,11 @@ module.exports = [
 		href: '/contact',
 		pageTitle: 'Contact us'
 	},
+	{
+		id: '404',
+		label: 'Contact',
+		href: '/404',
+		pageTitle: 'Page not found',
+		omitFromNavigation: true
+	},
 ];

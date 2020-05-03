@@ -18,12 +18,14 @@ const App = ({ Component, pageProps }) => {
 		route: router.route,
 	};
 
-	const pageTitle = routes.filter(route => pageProps.currentPage.route === route.href)[0].pageTitle;
+	const pageConfig = routes.filter(route => pageProps.currentPage.route === route.href)[0];
+	let pageTitle = '';
+	if (pageConfig) pageTitle = `${pageConfig.pageTitle} | `;
 
 	return (
 		<>
 			<Head>
-				<title>{pageTitle} | <%= projectName %></title>
+				<title>{pageTitle}<%= projectName %></title>
 			</Head>
 			<ThemeProvider theme={Theme}>
 				<SiteHeader {...pageProps} />
