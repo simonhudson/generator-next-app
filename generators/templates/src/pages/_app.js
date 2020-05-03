@@ -8,6 +8,7 @@ import Theme from '~/theme';
 import SiteHeader from '~/components/site-header';
 import Hero from '~/components/hero';
 import SiteFooter from '~/components/site-footer';
+import routes from '~/config/routes';
 
 const App = ({ Component, pageProps }) => {
 	const router = useRouter();
@@ -17,10 +18,12 @@ const App = ({ Component, pageProps }) => {
 		route: router.route,
 	};
 
+	const pageTitle = routes.filter(route => pageProps.currentPage.route === route.href)[0].pageTitle;
+
 	return (
 		<>
 			<Head>
-				<title>Test Site</title>
+				<title>{pageTitle} | <%= projectName %></title>
 			</Head>
 			<ThemeProvider theme={Theme}>
 				<SiteHeader {...pageProps} />

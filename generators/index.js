@@ -157,10 +157,11 @@ module.exports = class extends Generator {
     		this._logActionStart(action);
     		const dirsToCopy = ['.vscode', 'cypress', 'public', 'src'];
     		dirsToCopy.forEach(dir => {
-    			this.fs.copy(
+                this.fs.copyTpl(
     				`${dirs(this).src[dir]}**\\*`,
-    				`${dirs(this).dest[dir]}`
-    			)
+    				`${dirs(this).dest[dir]}`,
+    				this._writeFileConfig()
+    			);
     		});
 			if (this.config.get('copyUtilities') === 'y') {
 				this.fs.copy(
