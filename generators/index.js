@@ -9,19 +9,20 @@ const dirs = self => {
 	return {
 		src: {
             root: `${self.templatePath()}\\`,
-            cypress: `${self.templatePath()}\\src\\`,
+            '.vscode': `${self.templatePath()}\\.vscode\\`,
+            cypress: `${self.templatePath()}\\cypress\\`,
             public: `${self.templatePath()}\\public\\`,
             src: `${self.templatePath()}\\src\\`,
-            utilities: `${self.templatePath()}\\utilities\\`,
-            '.vscode': `${self.templatePath()}\\.vscode\\`
+            utilities: `${self.templatePath()}\\utilities\\`
+            
 		},
 		dest: {
             root: `${self.destinationPath()}\\`,
-            cypress: `${self.destinationPath()}\\src\\`,
+            '.vscode': `${self.destinationPath()}\\.vscode\\`,
+            cypress: `${self.destinationPath()}\\cypress\\`,
             public: `${self.destinationPath()}\\public\\`,
             src: `${self.destinationPath()}\\src\\`,
-            utilities: `${self.destinationPath()}\\src\\utilities\\`,
-            '.vscode': `${self.destinationPath()}\\.vscode\\`
+            utilities: `${self.destinationPath()}\\src\\utilities\\`
 		}
 	}
 };
