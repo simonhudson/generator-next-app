@@ -1,0 +1,37 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": "entry"
+            }
+        ],
+        "@babel/preset-react",
+        "next/babel"
+    ],
+    "plugins": [
+        ["styled-components", { "ssr": true, "displayName": true, "preprocess": false } ],
+        "@babel/plugin-proposal-object-rest-spread",
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-transform-async-to-generator",
+        "@babel/plugin-proposal-class-properties",
+        ["babel-plugin-root-import",
+            {
+                "paths": [
+                    {
+                        "rootPathPrefix": "~",
+                        "rootPathSuffix": "src"
+                    },
+                    {
+                        "rootPathPrefix": "&",
+                        "rootPathSuffix": "public"
+                    },
+                    {
+                        "rootPathPrefix": "$",
+                        "rootPathSuffix": "cypress"
+                    }
+                ]
+            }
+        ]
+    ]
+}
