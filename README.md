@@ -18,11 +18,11 @@ Yeoman Generators need to be run from your global node_modules directory (e.g: `
 
 In order to do this, you have two options
 
-* Simply place the **generator-react** directory into this global `node_modules` directory
+* Simply place the **generator-next-app** directory into this global `node_modules` directory
 
 OR
 
-* Place the **generator-react** directory wherever you want, open a `cmd`, navigate to the location of the folder and run `npm link`. This will create an alias in your global `node_modules` directory, pointing to wherever you've stored the **generator-react** directory
+* Place the **generator-next-app** directory wherever you want, open a `cmd`, navigate to the location of the folder and run `npm link`. This will create an alias in your global `node_modules` directory, pointing to wherever you've stored the **generator-next-app** directory
 
 ## How to run
 
