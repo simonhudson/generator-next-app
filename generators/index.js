@@ -148,7 +148,7 @@ module.exports = class extends Generator {
         const writeFiles = () => {
     		const action = 'Writing files';
     		this._logActionStart(action);
-    		fs.writeFile('.env','API_URL=https://swapi.co/api', () => {
+    		fs.writeFile('.env','API_URL=https://swapi.co/api\nNODE_ENV=local', () => {
                 this._logActionComplete(action);
             });
         };
